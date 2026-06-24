@@ -1,198 +1,402 @@
+<!-- NAVBAR -->
 <nav class="navbar">
-  <div class="logo">Manikanta Kummarapurugu</div>
-  <button class="menu-btn" (click)="toggleMobileMenu()">&#9776;</button>
+  <div class="logo">MK<span class="logo-dot">.</span></div>
+  <button class="menu-btn" (click)="toggleMobileMenu()" aria-label="Toggle menu">&#9776;</button>
   <div class="nav-links" [class.open]="mobileMenuOpen">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <a href="#about" (click)="mobileMenuOpen=false">About</a>
+    <a href="#skills" (click)="mobileMenuOpen=false">Skills</a>
+    <a href="#experience" (click)="mobileMenuOpen=false">Experience</a>
+    <a href="#projects" (click)="mobileMenuOpen=false">Projects</a>
+    <a href="#contact" (click)="mobileMenuOpen=false">Contact</a>
   </div>
 </nav>
-<div style="background-color:#111826;margin-top:2px">
-  <section id="about" class="about-section">
-    <h2 class="section-title" style="color: white;">👨‍💻 About Me</h2>
-    <p class="about-text">
-      I'm a passionate Web and Mobile Application Developer with 3 years of
-      experience building scalable and user-friendly applications. I specialize in
-      Angular, PrimeNG, PrimeReact, React Native, PHP REST APIs, and MySQL.
 
-      I enjoy continuously learning modern technologies to deliver high-quality products.
-    </p>
-    <div class="education-card">
-      <div class="edu-header">
-        <i class="pi pi-graduation-cap"></i>
-        <h3>Education</h3>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-badge">Available for work</div>
+  <h1 class="hero-name">Manikanta<br><span class="hero-name-accent">Kummarapurugu</span></h1>
+  <p class="hero-tagline">React Native &amp; Full-Stack Developer · Workflow Automation · AI Integration</p>
+  <p class="hero-sub">
+    3+ years shipping production iOS &amp; Android apps. Five live apps on the App Store &amp; Play Store.
+    Sole developer handling architecture → deployment.
+  </p>
+  <div class="hero-cta-row">
+    <a href="#projects" class="btn-primary">View Projects</a>
+    <a href="#contact" class="btn-ghost">Get in Touch</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><span class="stat-num">5</span><span class="stat-label">Live Apps</span></div>
+    <div class="stat-div"></div>
+    <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Years XP</span></div>
+    <div class="stat-div"></div>
+    <div class="stat"><span class="stat-num">iOS&amp;Android</span><span class="stat-label">Platforms</span></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section about-section">
+  <div class="container">
+    <span class="eyebrow">About</span>
+    <h2 class="section-title">Building things that ship.</h2>
+    <div class="about-grid">
+      <div class="about-text-block">
+        <p>
+          Self-taught Full-Stack and React Native Developer with hands-on experience building and shipping
+          production-grade iOS and Android applications, web platforms, and automated digital workflows.
+        </p>
+        <p>
+          I've served as sole developer on five live mobile apps covering the full software development
+          lifecycle — from architecture through App Store and Play Store deployment — while also building
+          REST APIs, AI pipelines, and N8N automation workflows.
+        </p>
+        <p>
+          Comfortable owning projects end-to-end and communicating technical decisions to non-technical stakeholders.
+        </p>
       </div>
-
-      <div class="edu-body">
-        <h4>B.Tech — Mechanical Engineering</h4>
-        <p class="edu-college">BVC Engineering College</p>
-        <span class="edu-year">2018</span>
+      <div class="about-cards">
+        <div class="info-card">
+          <i class="pi pi-graduation-cap card-icon"></i>
+          <div>
+            <h4>B.Tech — Mechanical Engineering</h4>
+            <p class="card-sub">BVC Engineering College · 2014–2018</p>
+            <p class="card-note">Self-taught in web development, React Native, workflow automation &amp; AI tooling</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <i class="pi pi-map-marker card-icon"></i>
+          <div>
+            <h4>Based in India</h4>
+            <p class="card-sub">Open to remote &amp; contract opportunities</p>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+</section>
 
-    <p-card class="hero-card">
-      <ng-template pTemplate="header">
-        🚀 Availabe for work
-      </ng-template>
-      Angular . React . React Native . PHP . MySQL . TypeScript
-    </p-card>
-  </section>
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <div class="container">
+    <span class="eyebrow">Skills</span>
+    <h2 class="section-title">Technical Stack</h2>
+    <div class="skills-groups">
+      <div class="skill-group">
+        <h3 class="skill-group-title">📱 Mobile</h3>
+        <div class="skill-pills">
+          <span class="pill">React Native</span>
+          <span class="pill">iOS Deployment</span>
+          <span class="pill">Android Deployment</span>
+          <span class="pill">App Store / Play Store</span>
+          <span class="pill">Push Notifications</span>
+          <span class="pill">Geolocation</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3 class="skill-group-title">🌐 Frontend</h3>
+        <div class="skill-pills">
+          <span class="pill">Angular</span>
+          <span class="pill">React</span>
+          <span class="pill">TypeScript</span>
+          <span class="pill">JavaScript</span>
+          <span class="pill">PrimeNG</span>
+          <span class="pill">PrimeReact</span>
+          <span class="pill">HTML5 / CSS3</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3 class="skill-group-title">⚙️ Backend &amp; APIs</h3>
+        <div class="skill-pills">
+          <span class="pill">PHP</span>
+          <span class="pill">MySQL</span>
+          <span class="pill">REST API Design</span>
+          <span class="pill">iPage Hosting</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3 class="skill-group-title">🤖 AI &amp; Automation</h3>
+        <div class="skill-pills">
+          <span class="pill">N8N Workflows</span>
+          <span class="pill">Claude API</span>
+          <span class="pill">OpenAI GPT</span>
+          <span class="pill">Google Gemini Flash</span>
+          <span class="pill">Prompt Engineering</span>
+          <span class="pill">Ollama (Gemma4 / Qwen2.5)</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3 class="skill-group-title">🔒 Auth &amp; Security</h3>
+        <div class="skill-pills">
+          <span class="pill">Google Authenticator (2FA)</span>
+          <span class="pill">Device-based Access Control</span>
+          <span class="pill">Encrypted Credential Storage</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3 class="skill-group-title">🛠️ Tools</h3>
+        <div class="skill-pills">
+          <span class="pill">Git</span>
+          <span class="pill">GitHub Copilot</span>
+          <span class="pill">Postman</span>
+          <span class="pill">Manual Testing</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <section id="skills">
-    <h2 class="section-title" style="color: white;">🛠️ Technical Skills</h2>
-    <div class="skills">
-      <p-card class="skills-card">Angular</p-card>
-      <p-card class="skills-card">PrimeNG</p-card>
-      <p-card class="skills-card">PrimeReact</p-card>
-      <p-card class="skills-card">React Native</p-card>
-      <p-card class="skills-card">PHP Rest APIs</p-card>
-      <p-card class="skills-card">MySQL</p-card>
-      <p-card class="skills-card">TypeScript</p-card>
-      <p-card class="skills-card">Postman</p-card>
-      <p-card class="skills-card">N8N</p-card>
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <div class="container">
+    <span class="eyebrow">Experience</span>
+    <h2 class="section-title">Work History</h2>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="tl-header">
+            <div>
+              <h3 class="tl-role">React Native &amp; Full-Stack Developer</h3>
+              <p class="tl-org">KrimeWatch Foundation Inc (Non-profit)</p>
+            </div>
+            <span class="tl-date">Jul 2024 – Present</span>
+          </div>
+          <ul class="tl-list">
+            <li>Sole developer for five live React Native apps (KrimeScene, KrimeWatch, KrimeMonitor, KrimeAction, EliteCap) on Google Play Store and Apple App Store</li>
+            <li>Built KrimeScene — community public safety app with incident reporting (video/photo/text), crime search, neighborhood alerts, and device-based access via unique mobile device IDs</li>
+            <li>Engineered AI-powered incident classification pipelines integrating Google Gemini Flash, OpenAI GPT, and Claude API via N8N workflows — automating real-time public safety alert generation</li>
+            <li>Built digital marketing automation: Excel → AI → simultaneous publish to Facebook, Instagram, Threads, Bluesky, and Telegram — eliminating manual posting for the nonprofit</li>
+            <li>Designed and maintained the full system: React Native apps, PHP/MySQL REST API backend, and N8N pipelines</li>
+            <li>Communicated AI system behavior in plain language to nonprofit leadership and law enforcement partners</li>
+          </ul>
+          <div class="tl-tags">
+            <span class="tag">React Native</span>
+            <span class="tag">PHP / MySQL</span>
+            <span class="tag">N8N</span>
+            <span class="tag">Claude API</span>
+            <span class="tag">OpenAI GPT</span>
+            <span class="tag">Gemini Flash</span>
+            <span class="tag">Google Maps API</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="tl-header">
+            <div>
+              <h3 class="tl-role">Web Developer</h3>
+              <p class="tl-org">Abbigale Cloud Services / Jayson &amp; Williams Technologies</p>
+            </div>
+            <span class="tl-date">Mar 2023 – Jun 2024</span>
+          </div>
+          <ul class="tl-list">
+            <li>Developed EliteCap — a cross-platform React Native proof-capture app (iOS &amp; Android) with real-time geotagged video/photo capture, secure cloud storage, and 30-second video optimization</li>
+            <li>Built the VoterSurvey System — a full-stack civic tech platform (Angular web, React admin panel, React Native mobile) from requirements through production deployment</li>
+            <li>Delivered multiple client projects including dashboards, CRUD modules, and civic data tools using Angular, React, and React Native</li>
+            <li>Built and maintained N8N automation workflows, reducing manual operational effort for clients</li>
+          </ul>
+          <div class="tl-tags">
+            <span class="tag">Angular</span>
+            <span class="tag">React</span>
+            <span class="tag">React Native</span>
+            <span class="tag">N8N</span>
+            <span class="tag">PHP / MySQL</span>
+          </div>
+        </div>
+      </div>
 
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="projects">
-    <h2 class="section-title" style="color: white;">📂 Projects</h2>
-    <div class="projects">
-      <p-card class="project-card krime-card">
-        <ng-template pTemplate="header">
-          <div class="project-header">
-            🚨 <strong>KrimeScene — Mobile Crime Awareness App</strong>
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <div class="container">
+    <span class="eyebrow">Projects</span>
+    <h2 class="section-title">Live Products</h2>
+    <div class="projects-grid">
+
+      <div class="project-card featured">
+        <div class="project-card-inner">
+          <div class="project-emoji">🚨</div>
+          <h3 class="project-name">KrimeScene</h3>
+          <p class="project-role">Sole Developer</p>
+          <p class="project-desc">
+            Community public safety app enabling users to submit incident reports (video/photo/text),
+            search local crime data, receive neighborhood alerts, and report missing persons.
+            Device-based access via unique mobile device ID — no traditional login required.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">React Native</span>
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">Push Notifications</span>
           </div>
-        </ng-template>
-        <p class="project-desc">
-          KrimeScene is a community-driven mobile application that enables users to
-          report incidents, receive real-time crime alerts, and improve neighborhood safety.
-          I independently developed the complete cross-platform application using React Native.
-        </p>
-        <ul class="project-features">
-          <li>📱 Cross-platform app (Android & iOS)</li>
-          <li>📍 Real-time crime reporting</li>
-          <li>🔔 Push notifications</li>
-          <li>⚡ Optimized user experience</li>
-        </ul>
-        <div class="project-links">
-          <a href="https://play.google.com/store/apps/details?id=acs.com.KrimeScene&pcampaignid=web_share"
-            target="_blank" class="project-btn">
-            🤖 Android
-          </a>
-
-          <a href="https://apps.apple.com/us/app/krimescene/id6737813493" target="_blank" class="project-btn ios">
-            🍎 iOS
-          </a>
-        </div>
-      </p-card>
-      <p-card class="project-card">
-        <ng-template pTemplate="header">
-          <div class="project-header">
-            💰 <strong>DailyRoll — Expense Management App</strong>
-          </div>
-        </ng-template>
-        <p class="project-desc">
-          DailyRoll is a personal expense tracking application that helps users manage
-          daily budgets, monitor spending, and track incoming and outgoing payments.
-          I also converted the DailyRoll web platform from Angular to PrimeReact.
-        </p>
-        <div class="project-links">
-          <a href="https://play.google.com/store/apps/details?id=acs.com.dailyroll&pcampaignid=web_share"
-            target="_blank" class="project-btn">
-            🤖 Android
-          </a>
-          <a href="https://apps.apple.com/us/app/daily-roll/id1437712015" target="_blank" class="project-btn ios">
-            🍎 iOS
-          </a>
-        </div>
-      </p-card>
-      <p-card class="project-card">
-
-        <ng-template pTemplate="header">
-          <div class="project-header">
-            📸 <strong>EliteCap — Proof Capture App</strong>
-          </div>
-        </ng-template>
-
-        <p class="project-desc">
-          EliteCap enables users to capture real-time photo and video proof of events
-          and incidents. The app ensures reliable evidence collection so users can
-          easily document and reconstruct their story when needed.
-        </p>
-
-        <div class="project-links">
-          <a href="https://play.google.com/store/apps/details?id=acs.com.elitecap&pcampaignid=web_share" target="_blank"
-            class="project-btn">
-            🤖 Android
-          </a>
-
-          <a href="https://apps.apple.com/us/app/elitecap/id1406820737" target="_blank" class="project-btn ios">
-            🍎 iOS
-          </a>
-        </div>
-
-      </p-card>
-      <p-card class="project-card">
-
-        <ng-template pTemplate="header">
-          <div class="project-header">
-            🌐 <strong>DailyRoll Web — PrimeReact Migration</strong>
-          </div>
-        </ng-template>
-
-        <p class="project-desc">
-          Migrated the DailyRoll web platform from Angular to PrimeReact,
-          improving performance, modernizing the UI, and enhancing
-          maintainability. The application helps users manage daily expenses
-          and financial tracking through a responsive web interface.
-        </p>
-
-        <div class="project-links">
-          <span class="project-tag">⚛️ PrimeReact</span>
-          <span class="project-tag">🅰️ Angular (Legacy)</span>
-          <span class="project-tag">📱 Responsive Web</span>
-        </div>
-
-      </p-card>
-
-      <p-card class="project-card">
-
-        <ng-template pTemplate="header">
-          <div class="project-header">
-            🌐 KrimeWatch
-          </div>
-        </ng-template>
-
-        <p class="project-desc">
-          PrimeReact-based web application that helps communities report and
-          monitor crime incidents in real time, improving public awareness
-          and safety worldwide.
-        </p>
-
-        <ng-template pTemplate="footer">
           <div class="project-links">
-            <a href="https://krimewatch.com" target="_blank" class="project-link">
-              🔗 KrimeWatch
-            </a>
+            <a href="https://play.google.com/store/apps/details?id=acs.com.KrimeScene" target="_blank" class="store-btn android">🤖 Play Store</a>
+            <a href="https://apps.apple.com/us/app/krimescene/id6737813493" target="_blank" class="store-btn ios">🍎 App Store</a>
           </div>
-        </ng-template>
+        </div>
+      </div>
 
-      </p-card>
+      <div class="project-card">
+        <div class="project-card-inner">
+          <div class="project-emoji">📡</div>
+          <h3 class="project-name">KrimeWatch</h3>
+          <p class="project-role">Sole Developer</p>
+          <p class="project-desc">
+            Community video-sharing and safety monitoring platform with video upload/sharing,
+            neighborhood safety alerts, emergency call facilitation, and email notifications.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">React Native</span>
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">MySQL</span>
+          </div>
+          <div class="project-links">
+            <a href="https://krimewatch.com" target="_blank" class="store-btn web">🌐 Website</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-inner">
+          <div class="project-emoji">🛡️</div>
+          <h3 class="project-name">KrimeMonitor</h3>
+          <p class="project-role">Sole Developer</p>
+          <p class="project-desc">
+            Safety monitoring app with a dedicated Monitor Screen streaming curated alert media
+            from the volunteer control room. Features Saved Alerts, email-based 2FA, and full
+            account lifecycle with 30-day deletion window.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">React Native</span>
+            <span class="tech-tag">2FA</span>
+            <span class="tech-tag">PHP / MySQL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-inner">
+          <div class="project-emoji">⚡</div>
+          <h3 class="project-name">KrimeAction</h3>
+          <p class="project-role">Sole Developer</p>
+          <p class="project-desc">
+            Restricted-access volunteer coordination app for authorized Action Team members.
+            Features incident workflow management, in-app GPS navigation, Google Maps,
+            in-app media capture, and Google Authenticator 2FA.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">React Native</span>
+            <span class="tech-tag">Google Maps API</span>
+            <span class="tech-tag">Google Authenticator</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-inner">
+          <div class="project-emoji">📸</div>
+          <h3 class="project-name">EliteCap</h3>
+          <p class="project-role">Lead Developer</p>
+          <p class="project-desc">
+            Proof-capture app enabling users to record real-time geotagged videos and photos
+            as legal or personal proof. Features secure cloud storage, share/unshare controls,
+            archive management, and 30-second video optimization.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">React Native</span>
+            <span class="tech-tag">Geolocation</span>
+            <span class="tech-tag">Cloud Storage</span>
+          </div>
+          <div class="project-links">
+            <a href="https://play.google.com/store/apps/details?id=acs.com.elitecap" target="_blank" class="store-btn android">🤖 Play Store</a>
+            <a href="https://apps.apple.com/us/app/elitecap/id1406820737" target="_blank" class="store-btn ios">🍎 App Store</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-inner">
+          <div class="project-emoji">💰</div>
+          <h3 class="project-name">DailyRoll</h3>
+          <p class="project-role">Developer &amp; Migration</p>
+          <p class="project-desc">
+            Personal expense tracking app — daily budgets, spending monitoring, incoming/outgoing
+            payments. Also migrated the DailyRoll web platform from Angular to PrimeReact.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">React Native</span>
+            <span class="tech-tag">PrimeReact</span>
+            <span class="tech-tag">Angular</span>
+          </div>
+          <div class="project-links">
+            <a href="https://play.google.com/store/apps/details?id=acs.com.dailyroll" target="_blank" class="store-btn android">🤖 Play Store</a>
+            <a href="https://apps.apple.com/us/app/daily-roll/id1437712015" target="_blank" class="store-btn ios">🍎 App Store</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card automation-card">
+        <div class="project-card-inner">
+          <div class="project-emoji">🤖</div>
+          <h3 class="project-name">AI Marketing Automation</h3>
+          <p class="project-role">Sole Developer</p>
+          <p class="project-desc">
+            End-to-end automated social media publishing pipeline: Excel spreadsheet data →
+            AI-generated copy → simultaneous publish to Facebook, Instagram, Threads, Bluesky,
+            and Telegram. Eliminated all manual posting for the nonprofit.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">N8N</span>
+            <span class="tech-tag">OpenAI GPT</span>
+            <span class="tech-tag">Claude API</span>
+            <span class="tech-tag">Facebook API</span>
+            <span class="tech-tag">Instagram API</span>
+            <span class="tech-tag">Telegram Bot</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-inner">
+          <div class="project-emoji">🗳️</div>
+          <h3 class="project-name">VoterSurvey System</h3>
+          <p class="project-role">Full-Stack Developer</p>
+          <p class="project-desc">
+            Full-stack civic technology platform for gathering and analyzing community survey input at scale.
+            Built web (Angular), admin panel (React), and mobile (React Native) from requirements to production.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Angular</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">React Native</span>
+            <span class="tech-tag">PHP / MySQL</span>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="contact" class="contact">
-    <h2 class="section-title" style="color: white;">📬 Contact Me</h2>
-    <div class="contact-row">
-      <a href="mailto:manikantakummarapurugu@gmail.com" class="contact-chip">
+<!-- CONTACT -->
+<section id="contact" class="section contact-section">
+  <div class="container contact-inner">
+    <span class="eyebrow">Contact</span>
+    <h2 class="section-title">Let's work together.</h2>
+    <p class="contact-sub">Available for freelance, contract, and full-time opportunities.</p>
+    <div class="contact-chips">
+      <a href="mailto:kmanikanta4321@gmail.com" class="contact-chip">
         <i class="pi pi-envelope"></i>
-        <span>manikantakummarapurugu@gmail.com</span>
+        <span>kmanikanta4321&#64;gmail.com</span>
       </a>
-
       <a href="tel:+917032797119" class="contact-chip">
         <i class="pi pi-phone"></i>
-        <span>+91 7032797119</span>
+        <span>+91 70327 97119</span>
       </a>
       <a href="https://www.linkedin.com/in/manikanta-kummarapurugu-190aa1101/" target="_blank" class="contact-chip">
         <i class="pi pi-linkedin"></i>
@@ -203,9 +407,9 @@
         <span>GitHub</span>
       </a>
     </div>
-  </section>
+  </div>
+</section>
 
-</div>
-<footer>
-  <p>&copy; 2026 Manikanta. All rights reserved.</p>
+<footer class="footer">
+  <p>&copy; 2026 Manikanta Kummarapurugu · Built with Angular &amp; PrimeNG</p>
 </footer>

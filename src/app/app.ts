@@ -1,18 +1,14 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, signal } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component } from '@angular/core';
 import { CardModule } from 'primeng/card';
-import { ToggleButtonModule } from 'primeng/togglebutton';
-import { PrimeNG } from 'primeng/config';
-import Aura from '@primeuix/themes/aura';
 
 @Component({
   selector: 'app-root',
-  imports: [ToggleButtonModule, FormsModule, CommonModule, CardModule],
+  imports: [CommonModule, CardModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App  {
+export class App {
   mobileMenuOpen = false;
 
   toggleMobileMenu() {
